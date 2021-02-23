@@ -1,52 +1,52 @@
-man(voeneg).
-man(ratibor).
-man(boguslav).
-man(velerad).
-man(duhovlad).
-man(svyatoslav).
-man(dobrozhir).
-man(bogomil).
-man(zlatomir).
+man(eren).
+man(armin).
+man(zik).
+man(jean).
+man(koni).
+man(marko).
+man(ervin).
+man(marlo).
+man(hannes).
 
-woman(goluba).
-woman(lubomila).
-woman(bratislava).
-woman(veslava).
-woman(zhdana).
-woman(bozhedara).
-woman(broneslava).
-woman(veselina).
-woman(zdislava).
+woman(mikasa).
+woman(christa).
+woman(sasha).
+woman(imir).
+woman(handji).
+woman(hitch).
+woman(dina).
+woman(frida).
+woman(anni).
 
-parent(voeneg,ratibor).
-parent(voeneg,bratislava).
-parent(voeneg,velerad).
-parent(voeneg,zhdana).
+parent(eren,armin).
+parent(eren,sasha).
+parent(eren,jean).
+parent(eren,handji).
 
-parent(goluba,ratibor).
-parent(goluba,bratislava).
-parent(goluba,velerad).
-parent(goluba,zhdana).
+parent(mikasa,armin).
+parent(mikasa,sasha).
+parent(mikasa,jean).
+parent(mikasa,handji).
 
-parent(ratibor,svyatoslav).
-parent(ratibor,dobrozhir).
-parent(lubomila,svyatoslav).
-parent(lubomila,dobrozhir).
+parent(armin,marko).
+parent(armin,ervin).
+parent(christa,marko).
+parent(christa,ervin).
 
-parent(boguslav,bogomil).
-parent(boguslav,bozhedara).
-parent(bratislava,bogomil).
-parent(bratislava,bozhedara).
+parent(zik,marlo).
+parent(zik,hitch).
+parent(sasha,marlo).
+parent(sasha,hitch).
 
-parent(velerad,broneslava).
-parent(velerad,veselina).
-parent(veslava,broneslava).
-parent(veslava,veselina).
+parent(jean,dina).
+parent(jean,frida).
+parent(imir,dina).
+parent(imir,frida).
 
-parent(duhovlad,zdislava).
-parent(duhovlad,zlatomir).
-parent(zhdana,zdislava).
-parent(zhdana,zlatomir).
+parent(koni,anni).
+parent(koni,hannes).
+parent(handji,anni).
+parent(handji,hannes).
 
 daughter(X,Y):-parent(Y,X),woman(X).
 daughter(X):-daughter(Y,X),write(Y).
