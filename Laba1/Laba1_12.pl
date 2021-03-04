@@ -62,4 +62,4 @@ parent(handji,hannes).
 
 
 uncle(X,Y):-parent(Z,H),parent(H,Y),parent(Z,X),X\=H,man(X),man(Z).
-uncle(X):-uncle(Y,X),write(Y),write(", "),fail.
+uncles(X):-uncle(Y,X),write(Y),write(", "),fail.
