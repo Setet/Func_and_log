@@ -61,5 +61,4 @@ parent(handji,anni).
 parent(handji,hannes).
 
 grand_pa(X,Y):-parent(X,Z),parent(Z,Y),man(X).
-
 grand_pa_and_son(X,Y):-grand_pa(X,Y)\=grand_pa(Y,X),man(X),man(Y).
