@@ -48,5 +48,5 @@ parent(koni,hannes).
 parent(handji,anni).
 parent(handji,hannes).
 
-brother(X,Y):-parent(Z,X),parent(Z,Y),man(X),woman(Z).
+brother(X,Y):-parent(Z,X),parent(Z,Y),man(X),woman(Z),X\=Y.
 brother(X):-brother(Y,X),write(Y),write(", "),fail.
