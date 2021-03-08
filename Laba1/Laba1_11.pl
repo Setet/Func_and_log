@@ -62,5 +62,5 @@ parent(handji,hannes).
 
 
 grand_da(X,Y):-parent(X,Z),parent(Z,Y),woman(X).
+grand_ma_and_da(X,Y):-grand_da(X,Y)\=grand_da(Y,X),woman(Y).
 
-grand_ma_and_da(X,Y):-grand_da(X,Y)\=grand_da(Y,X),woman(X),woman(Y).
