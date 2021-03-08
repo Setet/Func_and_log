@@ -48,5 +48,5 @@ parent(koni,hannes).
 parent(handji,anni).
 parent(handji,hannes).
 
-b_s(X,Y):-parent(Z,X),parent(Z,Y),woman(Z).
+b_s(X,Y):-parent(Z,X),parent(Z,Y),man(Z),X\=Y.
 b_s(X):-b_s(Y,X),write(Y),write(", "),fail.
