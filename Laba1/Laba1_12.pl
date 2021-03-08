@@ -60,6 +60,6 @@ parent(koni,hannes).
 parent(handji,anni).
 parent(handji,hannes).
 
-
-uncle(X,Y):-parent(Z,H),parent(H,Y),parent(Z,X),X\=H,man(X),man(Z).
+brother(X,Y):-parent(Q,X),parent(Q,Y),man(X),woman(Q),X\=Y.
+uncle(X,Y):-parent(Z,H),parent(H,Y),parent(Z,X),man(X),woman(Z),brother(H,X),X\=Y.
 uncles(X):-uncle(Y,X),write(Y),write(", "),fail.
