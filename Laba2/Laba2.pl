@@ -504,7 +504,7 @@ question14(X14):-write("14)Is the book written in Russian?"),nl,
 				write("1. yes"),nl,
 				write("0. no"),nl,
 				read(X14).
-question15(X15):-write("15)Did they make a movie based on the book??"),nl,
+question15(X15):-write("15)Did they make a movie based on the book?"),nl,
 				write("1. yes"),nl,
 				write("0. no"),nl,
 				read(X15).
