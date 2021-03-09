@@ -448,6 +448,73 @@ film(fight_club,0).
 film(book_thief,0).
 film(green_mile,0).
 
+%Ex 3
+sheet(bury_me_behind_the_baseboard,0).
+sheet(oblomov,0).
+sheet(airport,0).
+sheet(volhv,0).
+sheet(the_stars_are_to_blame,0).
+sheet(three_musketeers,0).
+sheet(lolita,0).
+sheet(three_in_the_boat_not_counting_the_dog,0).
+sheet(metro_2033,0).
+sheet(norwegian_forest,0).
+
+death(bury_me_behind_the_baseboard,0).
+death(oblomov,0).
+death(airport,0).
+death(volhv,0).
+death(the_stars_are_to_blame,0).
+death(three_musketeers,0).
+death(lolita,0).
+death(three_in_the_boat_not_counting_the_dog,0).
+death(metro_2033,1).
+death(norwegian_forest,1).
+
+friends(bury_me_behind_the_baseboard,0).
+friends(oblomov,0).
+friends(airport,0).
+friends(volhv,0).
+friends(the_stars_are_to_blame,1).
+friends(three_musketeers,1).
+friends(lolita,1).
+friends(three_in_the_boat_not_counting_the_dog,1).
+friends(metro_2033,0).
+friends(norwegian_forest,0).
+
+life(bury_me_behind_the_baseboard,0).
+life(oblomov,0).
+life(airport,1).
+life(volhv,1).
+life(the_stars_are_to_blame,1).
+life(three_musketeers,0).
+life(lolita,0).
+life(three_in_the_boat_not_counting_the_dog,1).
+life(metro_2033,0).
+life(norwegian_forest,0).
+
+receiver(bury_me_behind_the_baseboard,0).
+receiver(oblomov,1).
+receiver(airport,1).
+receiver(volhv,0).
+receiver(the_stars_are_to_blame,1).
+receiver(three_musketeers,0).
+receiver(lolita,1).
+receiver(three_in_the_boat_not_counting_the_dog,0).
+receiver(metro_2033,0).
+receiver(norwegian_forest,1).
+
+cost(bury_me_behind_the_baseboard,0).
+cost(oblomov,1).
+cost(airport,2).
+cost(volhv,3).
+cost(the_stars_are_to_blame,4).
+cost(three_musketeers,5).
+cost(lolita,6).
+cost(three_in_the_boat_not_counting_the_dog,7).
+cost(metro_2033,8).
+cost(norwegian_forest,9).
+
 question1(X1):-	write("1)The author is a woman?"),nl,
 				write("1.yes"),nl,
 				write("0.no"),nl,
@@ -508,8 +575,42 @@ question15(X15):-write("15)Did they make a movie based on the book?"),nl,
 				write("1. yes"),nl,
 				write("0. no"),nl,
 				read(X15).
+%Ex 3
+question16(X16):-write("1)Sheets of a book made of yellow paper?"),nl,
+				write("1. yes"),nl,
+				write("0. no"),nl,
+				read(X16).
+question17(X17):-write("2)Is the main character of the book dying?"),nl,
+				write("1. yes"),nl,
+				write("0. no"),nl,
+				read(X17).
+question18(X18):-write("3)Does the main character have friends?"),nl,
+				write("1. yes"),nl,
+				write("0. no"),nl,
+				read(X18).
+question19(X19):-write("4)Is the author of the book alive?"),nl,
+				write("1. yes"),nl,
+				write("0. no"),nl,
+				read(X19).
 
-pr:-	question1(X1),question2(X2),question3(X3),question4(X4),
+question20(X20):-write("5)Does the author have a receiver?"),nl,
+				write("1. yes"),nl,
+				write("0. no"),nl,
+				read(X20).
+question21(X21):-write("6)What is the cost of an advertising campaign?"),nl,
+				write("0. 1000"),nl,
+                                write("1. 2000"),nl,
+                                write("2. 3000"),nl,
+                                write("3. 4000"),nl,
+                                write("4. 5000"),nl,
+                                write("5. 6000"),nl,
+                                write("6. 7000"),nl,
+                                write("7. 8000"),nl,
+                                write("8. 9000"),nl,
+                                write("9. 10000"),nl,
+				read(X21).
+
+pr1:-	question1(X1),question2(X2),question3(X3),question4(X4),
 		question5(X5),question6(X6),question7(X7),question8(X8),
                 question9(X9),question10(X10),question11(X11),question12(X12),
                 question13(X13),question14(X14),question15(X15),
@@ -519,4 +620,21 @@ pr:-	question1(X1),question2(X2),question3(X3),question4(X4),
                 appraisal(X,X9),happyending(X,X10),franchise(X,X11),classic(X,X12),
                 nobel_prize(X,X13),language(X,X14),film(X,X15),
 		write(X).
+
+pr2:- question16(X16),question17(X17),question18(X18),question19(X19),question20(X20),question21(X21),
+
+    sheet(Y,X16),death(Y,X17),friends(Y,X18),life(Y,X19),receiver(Y,X20),cost(Y,X21),write(Y).
+
+
+
+
+
+
+
+
+
+
+
+
+
 
