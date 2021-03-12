@@ -448,72 +448,116 @@ film(fight_club,0).
 film(book_thief,0).
 film(green_mile,0).
 
-%Ex 3
-sheet(bury_me_behind_the_baseboard,0).
-sheet(oblomov,0).
-sheet(airport,0).
-sheet(volhv,0).
-sheet(the_stars_are_to_blame,0).
-sheet(three_musketeers,0).
-sheet(lolita,0).
-sheet(three_in_the_boat_not_counting_the_dog,0).
-sheet(metro_2033,0).
-sheet(norwegian_forest,0).
+%Задание 3
+quest(1,bury_me_behind_the_baseboard,0).
+quest(1,oblomov,0).
+quest(1,airport,0).
+quest(1,volhv,0).
+quest(1,the_stars_are_to_blame,0).
+quest(1,three_musketeers,0).
+quest(1,lolita,0).
+quest(1,three_in_the_boat_not_counting_the_dog,0).
+quest(1,metro_2033,0).
+quest(1,norwegian_forest,0).
 
-death(bury_me_behind_the_baseboard,0).
-death(oblomov,0).
-death(airport,0).
-death(volhv,0).
-death(the_stars_are_to_blame,0).
-death(three_musketeers,0).
-death(lolita,0).
-death(three_in_the_boat_not_counting_the_dog,0).
-death(metro_2033,1).
-death(norwegian_forest,1).
+quest(2,bury_me_behind_the_baseboard,0).
+quest(2,oblomov,0).
+quest(2,airport,0).
+quest(2,volhv,0).
+quest(2,the_stars_are_to_blame,0).
+quest(2,three_musketeers,0).
+quest(2,lolita,0).
+quest(2,three_in_the_boat_not_counting_the_dog,0).
+quest(2,metro_2033,1).
+quest(2,norwegian_forest,1).
 
-friends(bury_me_behind_the_baseboard,0).
-friends(oblomov,0).
-friends(airport,0).
-friends(volhv,0).
-friends(the_stars_are_to_blame,1).
-friends(three_musketeers,1).
-friends(lolita,1).
-friends(three_in_the_boat_not_counting_the_dog,1).
-friends(metro_2033,0).
-friends(norwegian_forest,0).
+quest(3,bury_me_behind_the_baseboard,0).
+quest(3,oblomov,0).
+quest(3,airport,0).
+quest(3,volhv,0).
+quest(3,the_stars_are_to_blame,1).
+quest(3,three_musketeers,1).
+quest(3,lolita,1).
+quest(3,three_in_the_boat_not_counting_the_dog,1).
+quest(3,metro_2033,0).
+quest(3,norwegian_forest,0).
 
-life(bury_me_behind_the_baseboard,0).
-life(oblomov,0).
-life(airport,1).
-life(volhv,1).
-life(the_stars_are_to_blame,1).
-life(three_musketeers,0).
-life(lolita,0).
-life(three_in_the_boat_not_counting_the_dog,1).
-life(metro_2033,0).
-life(norwegian_forest,0).
+quest(4,bury_me_behind_the_baseboard,0).
+quest(4,oblomov,0).
+quest(4,airport,1).
+quest(4,volhv,1).
+quest(4,the_stars_are_to_blame,1).
+quest(4,three_musketeers,0).
+quest(4,lolita,0).
+quest(4,three_in_the_boat_not_counting_the_dog,1).
+quest(4,metro_2033,0).
+quest(4,norwegian_forest,0).
 
-receiver(bury_me_behind_the_baseboard,0).
-receiver(oblomov,1).
-receiver(airport,1).
-receiver(volhv,0).
-receiver(the_stars_are_to_blame,1).
-receiver(three_musketeers,0).
-receiver(lolita,1).
-receiver(three_in_the_boat_not_counting_the_dog,0).
-receiver(metro_2033,0).
-receiver(norwegian_forest,1).
+quest(5,bury_me_behind_the_baseboard,0).
+quest(5,oblomov,1).
+quest(5,airport,1).
+quest(5,volhv,0).
+quest(5,the_stars_are_to_blame,1).
+quest(5,three_musketeers,0).
+quest(5,lolita,1).
+quest(5,three_in_the_boat_not_counting_the_dog,0).
+quest(5,metro_2033,0).
+quest(5,norwegian_forest,1).
 
-cost(bury_me_behind_the_baseboard,0).
-cost(oblomov,1).
-cost(airport,2).
-cost(volhv,3).
-cost(the_stars_are_to_blame,4).
-cost(three_musketeers,5).
-cost(lolita,6).
-cost(three_in_the_boat_not_counting_the_dog,7).
-cost(metro_2033,8).
-cost(norwegian_forest,9).
+quest(6,bury_me_behind_the_baseboard,0).
+quest(6,oblomov,1).
+quest(6,airport,2).
+quest(6,volhv,1).
+quest(6,the_stars_are_to_blame,4).
+quest(6,three_musketeers,0).
+quest(6,lolita,2).
+quest(6,three_in_the_boat_not_counting_the_dog,3).
+quest(6,metro_2033,0).
+quest(6,norwegian_forest,1).
+
+quest(7,bury_me_behind_the_baseboard,0).
+quest(7,oblomov,0).
+quest(7,airport,0).
+quest(7,volhv,0).
+quest(7,the_stars_are_to_blame,0).
+quest(7,three_musketeers,0).
+quest(7,lolita,0).
+quest(7,three_in_the_boat_not_counting_the_dog,0).
+quest(7,metro_2033,1).
+quest(7,norwegian_forest,1).
+
+quest(8,bury_me_behind_the_baseboard,0).
+quest(8,oblomov,0).
+quest(8,airport,0).
+quest(8,volhv,0).
+quest(8,the_stars_are_to_blame,1).
+quest(8,three_musketeers,1).
+quest(8,lolita,1).
+quest(8,three_in_the_boat_not_counting_the_dog,1).
+quest(8,metro_2033,0).
+quest(8,norwegian_forest,0).
+
+quest(9,bury_me_behind_the_baseboard,0).
+quest(9,oblomov,0).
+quest(9,airport,1).
+quest(9,volhv,1).
+quest(9,the_stars_are_to_blame,0).
+quest(9,three_musketeers,0).
+quest(9,lolita,1).
+quest(9,three_in_the_boat_not_counting_the_dog,1).
+quest(9,metro_2033,0).
+quest(9,norwegian_forest,0).
+
+quest(10,bury_me_behind_the_baseboard,0).
+quest(10,oblomov,1).
+quest(10,airport,0).
+quest(10,volhv,1).
+quest(10,the_stars_are_to_blame,0).
+quest(10,three_musketeers,1).
+quest(10,lolita,0).
+quest(10,three_in_the_boat_not_counting_the_dog,1).
+quest(10,metro_2033,0).
+quest(10,norwegian_forest,1).
 
 question1(X1):-	write("1)The author is a woman?"),nl,
 				write("1.yes"),nl,
@@ -575,40 +619,58 @@ question15(X15):-write("15)Did they make a movie based on the book?"),nl,
 				write("1. yes"),nl,
 				write("0. no"),nl,
 				read(X15).
-%Ex 3
-question16(X16):-write("1)Sheets of a book made of yellow paper?"),nl,
+%Задание 3
+%Короче,тут будет много всяких камитов
+%чтобы я не насрал себе в шорты
+%во время сдачи,не осуждайте
+question(1,X1):-write("1)Sheets of a book made of yellow paper?"),nl,
 				write("1. yes"),nl,
 				write("0. no"),nl,
-				read(X16).
-question17(X17):-write("2)Is the main character of the book dying?"),nl,
+				read(X1).
+question(2,X2):-write("2)Is the main character of the book dying?"),nl,
 				write("1. yes"),nl,
 				write("0. no"),nl,
-				read(X17).
-question18(X18):-write("3)Does the main character have friends?"),nl,
+				read(X2).
+question(3,X3):-write("3)Does the main character have friends?"),nl,
 				write("1. yes"),nl,
 				write("0. no"),nl,
-				read(X18).
-question19(X19):-write("4)Is the author of the book alive?"),nl,
+				read(X3).
+question(4,X4):-write("4)Is the author of the book alive?"),nl,
 				write("1. yes"),nl,
 				write("0. no"),nl,
-				read(X19).
+				read(X4).
 
-question20(X20):-write("5)Does the author have a receiver?"),nl,
+question(5,X5):-write("5)Does the author have a receiver?"),nl,
 				write("1. yes"),nl,
 				write("0. no"),nl,
-				read(X20).
-question21(X21):-write("6)What is the cost of an advertising campaign?"),nl,
+				read(X5).
+question(6,X6):-write("6)What is the cost of an advertising campaign?"),nl,
 				write("0. 1000"),nl,
                                 write("1. 2000"),nl,
                                 write("2. 3000"),nl,
                                 write("3. 4000"),nl,
                                 write("4. 5000"),nl,
-                                write("5. 6000"),nl,
-                                write("6. 7000"),nl,
-                                write("7. 8000"),nl,
-                                write("8. 9000"),nl,
-                                write("9. 10000"),nl,
-				read(X21).
+				read(X6).
+
+question(7,X7):-write("7)A red-bound book?"),nl,
+				write("1. yes"),nl,
+				write("0. no"),nl,
+				read(X7).
+
+question(8,X8):-write("8)Does the book contain biblical references?"),nl,
+				write("1. yes"),nl,
+				write("0. no"),nl,
+				read(X8).
+
+question(9,X9):-write("9)A book on the Star Wars universe?"),nl,
+				write("1. yes"),nl,
+				write("0. no"),nl,
+				read(X9).
+
+question(10,X10):-write("10)Does the author have a spouse?"),nl,
+				write("1. yes"),nl,
+				write("0. no"),nl,
+				read(X10).
 
 pr1:-	question1(X1),question2(X2),question3(X3),question4(X4),
 		question5(X5),question6(X6),question7(X7),question8(X8),
@@ -621,9 +683,36 @@ pr1:-	question1(X1),question2(X2),question3(X3),question4(X4),
                 nobel_prize(X,X13),language(X,X14),film(X,X15),
 		write(X).
 
-pr2:- question16(X16),question17(X17),question18(X18),question19(X19),question20(X20),question21(X21),
 
-    sheet(Y,X16),death(Y,X17),friends(Y,X18),life(Y,X19),receiver(Y,X20),cost(Y,X21),write(Y).
+%вызываем наш альтернативный акинатор с 1 вопроса и имеющимся книгами
+pr2:-pr(1,[bury_me_behind_the_baseboard,oblomov,airport,volhv,the_stars_are_to_blame,three_musketeers,lolita,three_in_the_boat_not_counting_the_dog,metro_2033,norwegian_forest]).
+
+%осн инструкция вызова
+pr(N,Book):-question(N,X),check(N,X,Book,[],Book_other),(alone(Book_other)->write([Book_other]),!;N1 is N+1,(lenght_2(Book_other)->select_quest(Book_other,N1,Next_quest),pr(Next_quest,Book_other);pr(N1,Book_other))).
+
+%ищем освпадения по ответам на вопросы(работаем по рекурсии вниз)
+%N-номер вопроса
+%X-ответ на этот вопрос
+%Book-книги расматриваемые на данной итерации
+%Other-вспомогательный элемент для рекурсии
+%Book_other-герои прошедшие фейс контроль
+check(_,_,[],Other,Other):-!.
+check(N,X,[Book|Tail],Other,Book_other):-(quest(N,Book,X)->check(N,X,Tail,[Book|Other],Book_other);check(N,X,Tail,Other,Book_other)).
+
+%проверка пустоты списка
+alone([_|Notalone]):-Notalone=[].
+
+%проверка на длину списка равной 2
+lenght_2([],L,L):-!.
+lenght_2([_|Tail],I,L):-I1 is I+1,lenght_2(Tail,I1,L).
+lenght_2(List):-lenght_2(List,0,L),L is 2.
+
+%проверяем какой вопрос задать,если осталось 2 элемента
+%Book1 и Book2-2элемента(тип 2 книги)
+%Quest-номер с какого вопроса нужно начинать искать
+%Next_quest-номер вопроса,который НУЖНО задать следующим!!!!
+select_quest([Book1,Book2],Quest,Next_quest):-quest(Quest,Book1,Answer1),quest(Quest,Book2,Answer2),(Answer1=\=Answer2 -> Next_quest is Quest,!;Quest1 is Quest+1, select_quest([Book1,Book2],Quest1,Next_quest)).
+
 
 
 
