@@ -6,4 +6,4 @@ read_str_f(A,N,Flag):-get0(X),r_str_f(X,A,[],N,0,Flag).
 write_str([]):-!.
 write_str([H|Tail]):-put(H),write_str(Tail).
 
-prExc1:-read_str_f(A,X,0),write_str(A),write(" , "),write_str(A),write(" , "),write_str(A),write(" , "),write(X).
+pr1:-read_str_f(A,X,0),write_str(A),write(" , "),write_str(A),write(" , "),write_str(A),write(" , "),write(X).
