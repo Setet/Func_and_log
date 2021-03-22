@@ -1,22 +1,27 @@
 list([El|_],El).
 list([_|T],El):-list(T,El).
 
+talants :- Talants = [_, _, _, _],
 
-masters:- masters:=[_,_,_,_],
-    list(masters,[voronov,_]),
-    list(masters,[pavlov,_]),
-    list(masters,[levitsky,_]),
-    list(masters,[saharov,_]),
-    list(masters,[_,dancer]),
-    list(masters,[_,painter]),
-    list(masters,[_,singer]),
-    list(masters,[_,writer]),
+                list(Talants, [voronov, _, _,_]),
+		list(Talants, [pavlov, _, _,_]),
+		list(Talants, [levitskiy, _, _, _]),
+		list(Talants, [saharov,_,_,_]),
 
-    not(list(masters,[voronov,singer])),
-    not(list(masters,[voronov,painter])),
-    not(list(masters,[pavlov,painter])),
-    not(list(masters,[pavlov,writer])),
-    not(list(masters,[saharov,writer])),
-    not(list(masters,[voronov,writer])),
+		list(Talants, [_, dancer,_,_ ]),
+		list(Talants, [_, painter,_,_ ]),
+		list(Talants, [_, singer,_,_]),
+		list(Talants, [_, writer, _ ,_]),
 
-write(masters),!.
+                list(Talants, [voronov, _, cons,writer]),
+		list(Talants, [pavlov, _, _,painter]),
+		list(Talants, [levitskiy, _, cons, _]),
+                list(Talants, [saharov,_,_,writer]),
+
+		list(Talants, [_, singer,cons,_]),
+		list(Talants, [_, writer, _,painter]),
+
+                not(list(Talants, [levitskiy, singer,_,_])),
+                not(list(Talants, [pavlov, writer,_,_])),
+
+		write(Talants), !.
