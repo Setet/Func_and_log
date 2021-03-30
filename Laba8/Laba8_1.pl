@@ -3,9 +3,15 @@ r_l_str(-1,N,N,1):-!.
 r_l_str(10,N,N,0):-!.
 r_l_str(_,N,K,Flag):-K1 is K+1,get0(X1),r_l_str(X1,N,K1,Flag).
 
+write_str([]):-!.
+write_str([H|Tail]):-put(H),write_str(Tail).
+
 readlength(LengthList):-read_length(N,Flag),readlength([N],LengthList,Flag).
 readlength(LengthList, LengthList,1):-!.
 readlength(CurLengthList,LengthList,0):-read_length(N,Flag),append(CurLengthList, [N],NewLengthList),readlength(NewLengthList,LengthList,Flag).
+
+in_list([El|_],El).
+in_list([_|T],El):-in_list(T,El).
 
 max(List, MaxEl):- max(List, 0, MaxEl).
 max([],CurMax, CurMax):- !.
@@ -92,6 +98,20 @@ elBynumber([],_,_,nil):-!.
 elBynumber([El|_],Ind,Ind,El):-!.
 elBynumber([_|T],I,Ind,El):-I1 is I+1,elBynumber(T,I1,Ind,El).
 
+noInciden([],_):-!.
+noInciden([H|T],UniqueWords):-(getwords(H,WordsHead),coin_str(WordsHead,UniqueWords)->write_str(H),nl,noInciden(T,UniqueWords);noInciden(T,UniqueWords)).
+
+coin_str([],_):-!.
+coin_str([H|T],UniqueWords):-in_list(UniqueWords,H),coin_str(T,UniqueWords).
+
+del(_,[],[]):-!.
+del(H,[H|T],Res):-del(H,T,Res),!.
+del(H,[H1|T],[H1|Res]):-not(H=H1),del(H,T,Res).
+
+notRepeat([],[]):-!.
+notRepeat([H|T],[H|Res]):-not(in_list(T,H)),notRepeat(T,Res),!.
+notRepeat([H|T],Res):-del(H,T,H1),notRepeat(H1,Res).
+
 %Ex1
 pr1:- see('C:/Users/user/Desktop/Func_and_Log/Laba8/Prolog1.txt'),readlength(LengthList),seen, max(LengthList,Max),write(Max).
 
@@ -103,6 +123,9 @@ pr3:- see('C:/Users/user/Desktop/Func_and_Log/Laba8/Prolog3.txt'),readlist(List)
 
 %Ex4
 pr4:-see('C:/Users/user/Desktop/Func_and_Log/Laba8/Prolog4.txt'),readlist(List), seen,wordsAllstr(List,[],List_frequent),uniqueElems(List_frequent,Unique_words),counts(Unique_words,C,List_frequent),indOfmax(C,Ind),elBynumber(Unique_words,Ind,Word),name(Word1,Word),write(Word1).
+
+%Ex5
+pr5:-see('C:/Users/user/Desktop/Func_and_Log/Laba8/Prolog5(1).txt'),readlist(List),seen,wordsAllstr(List,[],AllWords),notRepeat(AllWords,UniqueWords),tell('C:/Users/user/Desktop/Func_and_Log/Laba8/Prolog5(2).txt'),noInciden(List,UniqueWords),told.
 
 
 
