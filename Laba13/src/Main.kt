@@ -1,8 +1,43 @@
-import java.util.*
+import java.lang.Math.abs
 
-fun main(args: Array<String>)
+fun main()
 {
-    task8()
+    //task1()
+    //task3()
+    //task5()
+
+    val number = inputNumber()
+    println("Choose an action on a number:\n")
+    println("1)Find the sum of the digits of a number\n")
+    println("2)Minimum digit of a number:\n")
+    println("3)Maximum digit of a number\n")
+    println("4)Product of the digits of a number:\n")
+
+    val kekw: String? = readLine()
+    println("\n${yes(kekw,number)}")
+
+    println("Again?")
+    val pipu:String?= readLine()
+    println("${hehe(pipu)}")
+}
+
+fun inputNumber(): Int {
+    print("Enter the number:> ")
+    val number = readLine()
+
+    return if (number == null) {
+        inputNumber()
+    }
+    else
+    {
+        try
+        {
+            number.toInt()
+        } catch (e: NumberFormatException)
+        {
+            inputNumber()
+        }
+    }
 }
 
 fun task1() = println("Hello, World!")
@@ -34,96 +69,106 @@ fun task5()
 fun chooseAnswerByLanguage(language: String?) =
     when(language)
     {
-        "Prolog","Kotlin" -> "Suck."
-        "C#" -> "Will you give me your number, handsome?"
-        "C++" -> "brrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
-        "F#" -> "Ok"
-        "Pascal" -> "And you are not bad!"
-        "Python" ->"Why are you gay? "
-        else -> "WTF"
+        "Prolog","Kotlin" -> "Suck.\n"
+        "C#" -> "Will you give me your number, handsome?\n"
+        "C++" -> "brrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr\n"
+        "F#" -> "Ok\n"
+        "Pascal" -> "And you are not bad!\n"
+        "Python" ->"Why are you gay?\n"
+        else -> "WTF\n"
     }
 
-//я 7 задание запихнул в 6,т.к не понял зачем их разделять
-fun task6()
-{
-    val scanner = Scanner(System.`in`)
-    print("Enter number: ")
-    var i: Int = scanner.nextInt()
-    var sum = sum(i)
-    var min = min(i)
-    var max = max(i)
+fun yes(kekw: String?,number: Int)=
+    when(kekw)
+    {
+        "1"->"Sum = ${task6(number)}"
+        "2"->"Min = ${task7_1(number)}"
+        "3"->"Max = ${task7_2(number)}"
+        "4"->"Mult = ${task7_3(number)}"
+        else->"WTF\n"
+    }
 
-    print("min = $min\n")
-    print("max = $max\n")
-    print("sum = $sum")
+fun hehe(kek: String?): Unit =
+    when(kek)
+    {
+        "yes"->"${main()}"
+        "no"->System.exit(0)
+        else->"WTF\n"
+    } as Unit
+
+fun task6(number: Int): Int
+{
+    return if (number / 10 == 0)
+    {
+        abs(number % 10)
+    }
+    else
+    {
+        task6(number / 10) + abs(number % 10)
+    }
 }
 
-fun min(i:Int): Int
+fun task7_1(number: Int): Int
 {
-    var min = 100
-    var j=i
+    fun minDigit(number: Int, min: Int): Int {
+        val newNumber = number / 10
+        val digit = abs(number % 10)
 
-    while (j != 0)
-    {
-        if(min>j%10)
+        val newMin =
+            if (digit < min)
+            {
+                digit
+            }
+            else
+            {
+                min
+            }
+
+        return if (newNumber != 0)
         {
-            min=j%10
+            minDigit(newNumber, newMin)
         }
-        j /= 10
-    }
-    return min
-}
-
-fun max(i:Int): Int
-{
-    var max = 0
-    var j=i
-
-    while (j != 0)
-    {
-        if(max<j%10)
+        else
         {
-            max=j%10
+            newMin
         }
-        j /= 10
     }
-    return max
+    return minDigit(number, 10)
 }
 
-fun sum(i:Int): Int
+fun task7_2(number: Int): Int
 {
-    var sum = 0
-    var j = i
-
-    while (j != 0)
+    fun maxDigit(number: Int, max: Int): Int
     {
-        sum += j % 10
-        j /= 10
-    }
-    return sum
-}
+        val newNumber = number / 10
+        val digit = abs(number % 10)
 
-fun task8()
-{
-    val scanner = Scanner(System.`in`)
-    print("Enter number: ")
-    var i: Int = scanner.nextInt()
-    var Method2 = method2(i)
+        val newMax =
+            if (digit > max)
+            {
+                digit
+            }
+            else
+            {
+                max
+            }
 
-    print("Metod2 = $Method2\n")
-}
-
-fun method2(i:Int): Int {
-    var a = 3
-    var sum = 0
-    var j = i
-    while (j != 0)
-    {
-        if (j % 10 < a)
+        return if (newNumber != 0)
         {
-            sum += 1
+            maxDigit(newNumber, newMax)
         }
-        j /= 10
+        else
+        {
+            newMax
+        }
     }
-    return sum
+    return maxDigit(number, -1)
+}
+
+fun task7_3(number: Int): Int
+{
+    return if (number / 10 == 0)
+        abs(number % 10)
+    else
+        task7_3(number / 10) * abs(number % 10)
 }
