@@ -1,8 +1,8 @@
+import java.util.*
+
 fun main(args: Array<String>)
 {
-    task1()
-    task3()
-    task5()
+    task6()
 }
 
 fun task1() = println("Hello, World!")
@@ -40,5 +40,20 @@ fun chooseAnswerByLanguage(language: String?) =
         "F#" -> "Ok"
         "Pascal" -> "And you are not bad!"
         "Python" ->"Why are you gay? "
-        else -> "Don't show off like you're the boss"
+        else -> "WTF"
     }
+
+fun task6()
+{
+    val scanner = Scanner(System.`in`)
+    print("Enter number: ")
+    var i: Int = scanner.nextInt()
+    var sum = 0
+
+    while (i != 0)
+    {
+        sum += i % 10
+        i /= 10
+    }
+    println(sum)
+}
