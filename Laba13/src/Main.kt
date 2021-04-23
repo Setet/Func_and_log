@@ -1,4 +1,5 @@
 import java.lang.Math.abs
+import java.util.*
 
 fun main()
 {
@@ -6,19 +7,21 @@ fun main()
     //task3()
     //task5()
 
-    val number = inputNumber()
-    println("Choose an action on a number:\n")
-    println("1)Find the sum of the digits of a number\n")
-    println("2)Minimum digit of a number:\n")
-    println("3)Maximum digit of a number\n")
-    println("4)Product of the digits of a number:\n")
+    //val number = inputNumber()
+    //println("Choose an action on a number:\n")
+    //println("1)Find the sum of the digits of a number\n")
+    //println("2)Minimum digit of a number:\n")
+    //("3)Maximum digit of a number\n")
+    //println("4)Product of the digits of a number:\n")
 
-    val kekw: String? = readLine()
-    println("\n${yes(kekw,number)}")
+    //val kekw: String? = readLine()
+    //println("\n${yes(kekw,number)}")
 
-    println("Again?")
-    val pipu:String?= readLine()
-    println("${hehe(pipu)}")
+    //println("Again?")
+    //val pipu:String?= readLine()
+    //println("${hehe(pipu)}")
+
+    task10()
 }
 
 fun inputNumber(): Int {
@@ -84,7 +87,7 @@ fun yes(kekw: String?,number: Int)=
         "1"->"Sum = ${task6(number)}"
         "2"->"Min = ${task7_1(number)}"
         "3"->"Max = ${task7_2(number)}"
-        "4"->"Mult = ${task7_3(number)}"
+        "4"->"Multi = ${task7_3(number)}"
         else->"WTF\n"
     }
 
@@ -171,4 +174,51 @@ fun task7_3(number: Int): Int
         abs(number % 10)
     else
         task7_3(number / 10) * abs(number % 10)
+}
+
+fun task10()
+{
+    var sum=0
+    print("Enter word: ")
+    val scanner=Scanner(System.`in`)
+    var word:String = scanner.nextLine()
+
+    val line = "0abcdefghijklmnopqrstuvwxyz"
+
+    for(i in word.indices)
+    {
+        for(j in line.indices)
+        {
+            if(word[i]==line[j])
+            {
+                print(word[i]+"="+j+" ")
+                sum +=j
+            }
+        }
+    }
+    print("\nSum the word =$sum\n")
+    gh(sum,word)
+}
+
+fun gh(sum :Int,word:String)
+{
+    var n=1
+    var der=1;
+    for(i in 1..50)
+    {
+        der = (n * (n + 1)) / 2
+        if (der == sum)
+        {
+            print(" $der\n")
+            print("The word $word is the word of the triangle !!!!")
+            break;
+        } else {
+            print(" $der")
+            n += 1
+        }
+    }
+    if(der!=sum)
+    {
+        print("\nThe word $word is no the word of the triangle !!!!")
+    }
 }
