@@ -48,7 +48,7 @@ fun task2(number: Int, sum: Int): Int =
         sum + abs(number % 10)
     else
         task2(number / 10, sum + abs(number % 10))
-fun task2(number: Int): Int =
+tailrec fun task2(number: Int): Int =
     task2(number, 0)
 
 
