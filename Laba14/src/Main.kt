@@ -65,7 +65,7 @@ fun task3_1_Tail(number: Int, multi: Int): Int =
         multi * abs(number % 10)
     else
         task3_1_Tail(number / 10, multi * abs(number % 10))
-fun task3_1_Tail(number: Int): Int =
+tailrec fun task3_1_Tail(number: Int): Int =
     task3_1_Tail(number, 1)
 
 // рекурсия вверх
@@ -82,7 +82,7 @@ fun task3_2_Up(number: Int): Int {
     else digit
 }
 // хвостовая рекурсия
-fun task3_2_Tail(number: Int): Int {
+tailrec fun task3_2_Tail(number: Int): Int {
     fun task3_2_Tail(number: Int, min: Int): Int {
         val newNumber = number / 10
         val digit = abs(number % 10)
@@ -114,7 +114,7 @@ fun task3_3_Up(number: Int): Int {
 }
 
 // хвостовая рекурсия
-fun task3_3_Tail(number: Int): Int {
+tailrec fun task3_3_Tail(number: Int): Int {
     fun task3_3_Tail(number: Int, max: Int): Int {
         val newNumber = number / 10
         val digit = abs(number % 10)
