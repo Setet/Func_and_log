@@ -46,8 +46,19 @@ fun main() {
         println("\nError: ${e.message}!")
     }
 
-    Menu(number)
+    //Menu(number)
+    println("Sum fact : ${factorialDigitSum(number)}")
 }
+
+fun factorial(num: Int,res:Int): Int =
+    if(num>=2)
+    {
+        factorial(num-1,res*num)
+    }
+    else res
+
+fun factorialDigitSum(number: Int) =
+    task2(factorial(number,1),0)
 
 fun inputNumber(): Int {
     print("Enter the number:> ")
