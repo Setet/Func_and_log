@@ -119,9 +119,9 @@ fun inputListByFileV2(): List<Int> =
     catch(e: NumberFormatException) { throw e }
 
 fun selectArrayInputMethod(): () -> Array<Int> {
-    println("How do you want to input array?")
-    println("1. Console")
-    println("2. Standard file\n")
+    println("Как вы хотите ввести массив?")
+    println("1. Через консоль")
+    println("2. Через файл\n")
     print(">: ")
 
     return when(readLine()) {
@@ -131,7 +131,7 @@ fun selectArrayInputMethod(): () -> Array<Int> {
         }
         "2" -> ::inputArrayByFileV2
         else -> {
-            println("Invalid method. Try again!\n")
+            println("Ты шо написал?!\n")
             selectArrayInputMethod()
         }
     }
@@ -144,11 +144,11 @@ fun inputArray(): Array<Int> {
     catch(e: Exception) {
         when(e) {
             is NullPointerException, is java.io.FileNotFoundException -> {
-                println("\nError: ${e.message}! I'm sorry, select console :(\n")
+                println("\nОшибочка: ${e.message}!\n")
                 inputArray()
             }
             is NumberFormatException -> {
-                println("\nError: ${e.message}! Check the file.\n")
+                println("\nОшибочка: ${e.message}\n")
                 inputArray()
             }
             else -> throw e
@@ -157,9 +157,9 @@ fun inputArray(): Array<Int> {
 }
 
 fun selectListInputMethod(): () -> List<Int> {
-    println("How do you want to input list?")
-    println("1. Console")
-    println("2. Standard file\n")
+    println("Как вы хотите ввести список?")
+    println("1. Через консоль")
+    println("2. Через файл\n")
     print(">: ")
 
     return when(readLine()) {
@@ -169,7 +169,7 @@ fun selectListInputMethod(): () -> List<Int> {
         }
         "2" -> ::inputListByFileV2
         else -> {
-            println("Invalid method. Try again!\n")
+            println("Ты шо написал?!\n")
             selectListInputMethod()
         }
     }
@@ -182,11 +182,11 @@ fun inputList(): List<Int> {
     catch(e: Exception) {
         when(e) {
             is NullPointerException, is java.io.FileNotFoundException -> {
-                println("\nError: ${e.message}! I'm sorry, select console :(\n")
+                println("\nОшибочка: ${e.message}\n")
                 inputList()
             }
             is NumberFormatException -> {
-                println("\nError: ${e.message}! Check the file.\n")
+                println("\nОшибочка: ${e.message}\n")
                 inputList()
             }
             else -> throw e
