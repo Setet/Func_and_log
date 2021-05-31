@@ -97,6 +97,10 @@ fun main() {
     //print("\nВаш спискок: ")
     //outputList<Int>(list)
 
+    //8
+    //там где функции,ниже линии отсечения
+    //мне просто очень лень их рассписывать как в 4
+
     //9
     //val collections = task9(10000000)
     //val list = collections.first
@@ -393,7 +397,7 @@ fun task4_57(array: Array<Int>): Int {
     return array.withIndex().count { element -> element.value > sumBeforeIndex(array, element.index) } - 1
 }
 
-////////////////////////
+//--------------------------------------------------------------------------->
 
 fun task4_9(list: List<Int>): List<Int> {
     val min = min(list)
